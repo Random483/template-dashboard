@@ -1,0 +1,150 @@
+---
+format: gfm
+---
+
+<!--
+The readme.md file is automatically generated using Quarto.
+The automation was put in place to ensure that the latest update information is available.
+To see/update the code that creates this markdown, see the ./readme.Qmd file.
+-->
+
+```{r setup, include=FALSE}
+# This code block sets out the version information for this app
+require(readr)
+version_log <- read_csv("./version_log.csv")
+current_version_no <- version_log$`Version Number`[nrow(version_log)]
+updated_on <- version_log$`Updated On`[nrow(version_log)]
+updated_by <- version_log$`Updated By`[nrow(version_log)]
+```
+
+# R Shiny Template Dashboard
+
+- **By:** [Andrew Ross](mailto:andrew2.ROSS@education.gov.uk)
+- **App Version:** `r current_version_no`
+- **Updated On:** `r updated_on`
+- **Updated By:** `r updated_by`
+
+---
+
+## Rendering this readme
+
+To render this readme file and the about tab, use the below R-code:
+
+``` r
+quarto::quarto_render("readme.qmd", output_format = "gfm")
+quarto::quarto_render("./code/ui/markdown/about.qmd", output_format = "gfm")
+```
+
+This should be done each time version log is updated.
+
+Don't forget to update the version log when you update the app!
+
+---
+
+## Using This Template
+
+1. Create your new repo in DevOps.
+    - Do not just edit this repository, as this is the template and we don't want to overwite it!
+    - It's better and easier to create your repo first than to build your app then upload it to a repository.
+2. Download the contents of this repository and paste it into your new empty repository.
+    - If adding this template to an existing repository, make sure you check for conflicts before overwriting any files.
+3. Commit and push the repo, with a relevant commit message, e.g. _"Applied Dashboard Template"_
+4. Edit the files as necessary.
+5. Edit this file to reflect your new app.
+
+---
+
+## Structure of This Template
+
+### Why do I use this layout?
+
+Whilst I know it is possible to have everything in one really big file and navigate through it with pointers, I have a personal preference of many short files saved into a file system that is clearly laid out.
+This makes it simpler for me to be able to find the file I am interested in editing, and to keep track of the structure of the project as a whole.
+
+For example, if I want to edit a function, I can go to the `./code/server/functions` folder and look for the appropriately named function.
+If I want to add in a new function, I can create a new file and save it to the `./code/server/functions` folder, then reference it in the server file conveniently located `./code/server/server.r`.
+Similarly, if I want to edit a particular element of the user interface, I can quickly navigate through the ui folders to find the appropriate file.
+
+I have also had very positive reviews of this layout when code has been referred for QA.
+
+### Outline
+
+- ![Root Folder](https://img.shields.io/badge/Folder-Root_Project-51397a?&labelColor=e87d1e&logoColor=ffffff&logo=files&style=plastic)
+_Project folder containing all files_
+    - ![readme.qmd: Source readme file](https://img.shields.io/badge/Quarto-readme.qmd-51397a?&labelColor=447099&logoColor=ffffff&logo=markdown&style=plastic)
+    _Quarto source readme file for editing. Where **This File** is edited_
+    - ![readme.md: Readme markdown file](https://img.shields.io/badge/Markdown-readme.md-51397a?&labelColor=0000000&logoColor=ffffff&logo=markdown&style=plastic)
+    _Readme file for the project (do not edit)_
+    - ![app.r: Main app file](https://img.shields.io/badge/R-app.r-51397a?&labelColor=1f65cc&logoColor=ffffff&logo=r&style=plastic)
+    _Main app file: This file should not need editing._
+    - ![.lintr: linter file](https://img.shields.io/badge/Linter-.lintr-51397a?&labelColor=260859&style=plastic)
+    _Linting specifications_
+    - ![custom.css: Custom styling document](https://img.shields.io/badge/CSS-Custom.css-51397a?&labelColor=260859&style=plastic)
+    _Custom CSS styling: I've set this up for accessibility, using the DFE Style guide and the GSS Style Guide_
+    - ![Code Folder](https://img.shields.io/badge/Folder-Code-51397a?&labelColor=e87d1e&logoColor=ffffff&logo=files&style=plastic)
+    _Project folder containing all files_
+        - ![global.r: file for loading global variables](https://img.shields.io/badge/R-global.r-51397a?&labelColor=1f65cc&logoColor=ffffff&logo=r&style=plastic)
+        _This file runs on startup: Load environmental variables here_
+        - ![Server Folder](https://img.shields.io/badge/Folder-Server-51397a?&labelColor=e87d1e&logoColor=ffffff&logo=files&style=plastic)
+        _Project folder containing server functions_
+            - ![server.r: file for loading app functions](https://img.shields.io/badge/R-server.r-51397a?&labelColor=1f65cc&logoColor=ffffff&logo=r&style=plastic)
+            _This file links to the functions used to make the dashboard work_
+            - ![Functions Folder](https://img.shields.io/badge/Folder-Functions-51397a?&labelColor=e87d1e&logoColor=ffffff&logo=files&style=plastic)
+            _Add custom shiny functions here, and link in the server.r file_
+            - ![Render Folder](https://img.shields.io/badge/Folder-Render-51397a?&labelColor=e87d1e&logoColor=ffffff&logo=files&style=plastic)
+            _Add rendering files here, and link in the server.r file (including renderText, renderTable, etc)_
+        - ![UI Folder](https://img.shields.io/badge/Folder-UI-51397a?&labelColor=e87d1e&logoColor=ffffff&logo=files&style=plastic)
+        _Project folder containing user interface files for the separate tabs of the dashboard (add files for ui here)_
+            - ![ui.r: file for loading user interface](https://img.shields.io/badge/R-ui.r-51397a?&labelColor=1f65cc&logoColor=ffffff&logo=r&style=plastic)
+            _This file sets out the user interface of the app_
+            - ![Markdown Folder](https://img.shields.io/badge/Folder-Markdown-51397a?&labelColor=e87d1e&logoColor=ffffff&logo=files&style=plastic)
+            _Project folder containing markdown files for static info tabs (add any markdown files here)_
+                - ![about.qmd: Source about file](https://img.shields.io/badge/Quarto-About.qmd-51397a?&labelColor=447099&logoColor=ffffff&logo=markdown&style=plastic)
+                _Quarto source about file for editing: This file contains the markdown for the about tab_
+                - ![about.md: about markdown file](https://img.shields.io/badge/Markdown-About.md-51397a?&labelColor=0000000&logoColor=ffffff&logo=markdown&style=plastic)
+                _Markdown for the About tab (do not edit)_
+                - ![landing_page.md: markdown file](https://img.shields.io/badge/Markdown-Landing_Page.md-51397a?&labelColor=0000000&logoColor=ffffff&logo=markdown&style=plastic)
+                _Markdown for the landing page: Edit this to update the landing page_
+    - ![Renv Folder](https://img.shields.io/badge/Folder-Renv-51397a?&labelColor=e87d1e&logoColor=ffffff&logo=files&style=plastic)
+    _This folder contains the R environment, as managed by the renv library. Do not edit this directly unless you know what you are doing. It is far better to manage this through the renv functions outlined below._
+
+---
+
+## Renv Environment
+
+### What is Renv and Why Should We Use It?
+
+Renv is a package that acts as a package manager within your project.
+You use it to control the versions of your packages within the project, independently of what is installed elsewhere on your system.
+It is particularly useful when multiple people may be working on the same project, or when the project is to be deployed elsewhere.
+
+### What if we don't want to use it?
+
+It is possible to build your app without renv.
+However, if you haven't used renv, then when you deploy your app to RSConnect it will have to download and install the packages itself.
+This is notoriously slow, making an otherwise 1-2 minute update take well over an hour.
+There is also no control over which version of each package installed to the server.
+
+### What are the benefits of Renv?
+
+Alternatively by using renv, anyone also working on the app and RSConnect will be using the same versions of all the packages.
+I have also experienced deployment times of less than 1 minute!
+
+### Packages already loaded into Renv
+
+- **languageserver:** Something descriptive
+- **shiny:** Used for building the app
+- **tidyverse:** Always needed!
+- **scales:** Useful for making percentages and cash amounts neat
+- **viridis:** Colour scales where needed
+- **kableExtra:** Pretty table outputs
+- **janitor:** Use this for tidying datasets and nice rounding
+- **DT:** Alternative to kableExtra
+- **markdown:** For rendering Rmarkdown documents
+- **quarto:** For rendering Quarto documents
+
+### Adding extra packages into your dashboard via Renv
+
+When installing packages, use `renv::install("package_name")` to install directly into renv.
+Once you have finished adding packages, save the environment using `renv::snapshot()`.
+This will ensure that any new packages are loaded into your app for deployment.

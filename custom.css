@@ -1,0 +1,113 @@
+/* Custom Style Guide to bring cerulean dashboard themes into compliance */
+
+/*
+Define Colours
+    https://analysisfunction.civilservice.gov.uk/policy-store/codes-for-accessible-colours/
+Note:
+    I'd like to get these variables working, but for some reason they aren't.
+    For now, it's a useful spot to copy-paste from.
+ */
+:root {
+    --afblue: #12436d;
+    --af_cyan: #28A197;
+    --af_pink: #801650;
+    --af_orange: #f46a25;
+    --af_grey: #3d3d3d;
+    --af_purple: #a285d1;
+    --dfe_blue_100: #104f75;
+    --dfe_blue_080: #407291;
+    --dfe_blue_060: #7095ac;
+    --dfe_blue_040: #9fb9c8;
+    --dfe_blue_020: #cfdce3;
+}
+
+/* Font Colours */
+.font { color: black; }
+.h1 { color: #12436d; }
+.h2 { color: #12436d; }
+.h3 { color: #12436d; }
+.h4 { color: #12436d; }
+.h5 { color: #12436d; }
+.h6 { color: #12436d; }
+/* LINKS */
+a:link { color: #f46a25; }
+a:visited { color: #f46a25; }
+a:hover { color: #801650; }
+a:active { color: #801650; }
+
+/* Navigation Bar */
+.navbar {
+    background-image: linear-gradient(
+        #12436d,
+        #104f75,
+        #407291
+    );
+}
+.navbar li > a:active > a {
+    background-image: linear-gradient(
+        #12436d,
+        #104f75,
+        #407291
+    );
+}
+.nav {
+    background-image: linear-gradient(
+        #12436d,
+        #104f75,
+        #407291
+    );
+}
+.nav-tabs > li > a{
+    color: #ffffff;
+    background-image: linear-gradient(
+        #12436d,
+        #104f75,
+        #407291
+    );
+    border: 0;
+}
+
+.nav-tabs > li > a:hover {
+    color: #ffffff;
+    background-image: linear-gradient(
+        #2fa4e7,
+        #2fa4e7,
+        #2fa4e7);
+    border: 0;
+}
+
+.nav-tabs > li > a:focus {
+    color: #ffffff;
+    border: 0;
+}
+.nav-tabs > li.active > a {
+    color: #ffffff;
+    background-image: linear-gradient(
+        #2fa4e7,
+        #2fa4e7,
+        #2fa4e7);
+    border: 0;
+}
+
+.nav-tabs > li.active > a:hover {
+    color: #ffffff;
+    border: 0;
+}
+
+.nav-tabs > li.active > a:focus {
+    color: #ffffff;
+    border: 0;
+}
+
+/*Ensure table headers are highlighted in DfE colours, with white text*/
+thead {
+    background: #12436d;
+}
+th {
+    color: white;
+}
+.table-striped {
+    > tbody > tr:nth-child(even) {
+        background-color: #cfdce3;
+    }
+}

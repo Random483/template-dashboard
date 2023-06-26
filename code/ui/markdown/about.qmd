@@ -1,0 +1,45 @@
+---
+output: gfm
+---
+
+```{r setup, include=FALSE}
+# This code block sets out the version information for this app
+require(readr)
+version_log <- read_csv("../../../version_log.csv")
+current_version_no <- version_log$`Version Number`[nrow(version_log)]
+updated_on <- version_log$`Updated On`[nrow(version_log)]
+updated_by <- version_log$`Updated By`[nrow(version_log)]
+```
+<!--
+The about.md file is automatically generated using Quarto.
+The automation was put in place to ensure that the latest update information is available.
+To see the code that creates this markdown, see the about.Qmd file.
+-->
+
+## About
+
+This is a template app. Please update this text.
+
+***
+
+## Info
+
+- **Source:** _link to DevOps repository_
+
+- **App last updated on:** `r format(updated_on, "%A, %d %B %Y")`
+
+- **App Version:** `r current_version_no`
+
+- **This app was built by:** _insert name_
+
+- **Last updated by:** `r updated_by`
+
+- **QA completed by:**
+
+- **Sign off by:**
+
+- **Sign off on:**
+
+***
+
+If you see any issues, please contact _insert email address_
