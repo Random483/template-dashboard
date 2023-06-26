@@ -46,7 +46,7 @@ Don't forget to update the version log when you update the app!
 1. Create your new repo in DevOps.
     - Do not just edit this repository, as this is the template and we don't want to overwite it!
     - It's better and easier to create your repo first than to build your app then upload it to a repository.
-2. Download the contents of this repository and paste it into your new empty repository.
+2. Download the contents of [this repository](https://github.com/Random483/template-dashboard/) and paste it into your new empty repository.
     - If adding this template to an existing repository, make sure you check for conflicts before overwriting any files.
 3. Commit and push the repo, with a relevant commit message, e.g. _"Applied Dashboard Template"_
 4. Edit the files as necessary.
@@ -148,3 +148,7 @@ I have also experienced deployment times of less than 1 minute!
 When installing packages, use `renv::install("package_name")` to install directly into renv.
 Once you have finished adding packages, save the environment using `renv::snapshot()`.
 This will ensure that any new packages are loaded into your app for deployment.
+
+***
+
+_This dashboard created using the [dashboard template here](https://github.com/Random483/template-dashboard)_

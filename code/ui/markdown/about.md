@@ -32,3 +32,8 @@ This is a template app. Please update this text.
 ------------------------------------------------------------------------
 
 If you see any issues, please contact *insert email address*
+
+------------------------------------------------------------------------
+
+*This dashboard created using the [dashboard template
+here](https://github.com/Random483/template-dashboard)*

@@ -36,8 +36,9 @@ Don’t forget to update the version log when you update the app!
       don’t want to overwite it!
     - It’s better and easier to create your repo first than to build
       your app then upload it to a repository.
-2.  Download the contents of this repository and paste it into your new
-    empty repository.
+2.  Download the contents of [this
+    repository](https://github.com/Random483/template-dashboard/) and
+    paste it into your new empty repository.
     - If adding this template to an existing repository, make sure you
       check for conflicts before overwriting any files.
 3.  Commit and push the repo, with a relevant commit message,
@@ -186,3 +187,8 @@ When installing packages, use `renv::install("package_name")` to install
 directly into renv. Once you have finished adding packages, save the
 environment using `renv::snapshot()`. This will ensure that any new
 packages are loaded into your app for deployment.
+
+------------------------------------------------------------------------
+
+*This dashboard created using the [dashboard template
+here](https://github.com/Random483/template-dashboard)*
