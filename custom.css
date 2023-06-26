@@ -111,3 +111,65 @@ th {
         background-color: #cfdce3;
     }
 }
+
+/* Clickable Buttons */
+.action-button {
+    color: white;
+    background-image: linear-gradient(
+        #12436d,
+        #104f75,
+        #407291       
+    );
+    border-color: #bfbfbf;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-file {
+    color: white;
+    background-image: linear-gradient(
+        #12436d,
+        #104f75,
+        #407291       
+    );
+    border-color: #bfbfbf;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+    color: white;
+    background-image: linear-gradient(
+        #407291,
+        #104f75,
+        #407291       
+    );
+    border-color: #bfbfbf;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}.btn:active {
+    color: white;
+    background-image: linear-gradient(
+        #407291,
+        #104f75,
+        #407291       
+    );
+    border-color: #bfbfbf;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.form-control {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.selectize-input {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bar */
+.progress-bar {
+    color: white;
+    background-image: linear-gradient(
+        #12436d,
+        #104f75,
+        #407291       
+    );
+}
+
