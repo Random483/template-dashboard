@@ -20,7 +20,7 @@ describe the outputs
 
 ## How does this app work?
 
-This app was built in R, using the dashboard template found on [GitHub](link).
-The source code for this app can be found in [DevOps](link).
+This app was built in R, using the dashboard template found on [GitHub](https://github.com/Random483/template-dashboard).
+The source code for this app can be found in [DevOps](add_DevOps_link_here).
 
 ***
